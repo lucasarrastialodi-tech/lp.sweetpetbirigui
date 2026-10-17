@@ -1,0 +1,1436 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Pet Birigui | Banho e Tosa Sem Gaiolas</title>
+    <meta name="description" content="Banho e tosa com amor e carinho em Birigui. Ambiente 100% livre de gaiolas. Agende pelo WhatsApp (18) 99181-7474.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reset e Variáveis */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #f78da7;       /* Rosa suave */
+            --primary-dark: #e56b8a;
+            --secondary: #6c5ce7;     /* Roxo amigável */
+            --accent: #fdcb6e;        /* Amarelo alegre */
+            --bg-light: #fff9fb;
+            --bg-white: #ffffff;
+            --text-dark: #2d3436;
+            --text-gray: #636e72;
+            --whatsapp: #25D366;
+            --whatsapp-dark: #128C7E;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Fredoka', sans-serif;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Botões */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 28px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-whatsapp {
+            background-color: var(--whatsapp);
+            color: white;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+        }
+
+        .btn-whatsapp:hover {
+            background-color: var(--whatsapp-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--primary-dark);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--bg-white);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Fredoka', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+        }
+
+        .logo i {
+            font-size: 1.8rem;
+            color: var(--accent);
+        }
+
+        .header-cta {
+            display: flex;
+            gap: 10px;
+        }
+
+        .header-cta .btn {
+            padding: 10px 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Hero */
+        .hero {
+            padding: 60px 0 80px;
+            background: linear-gradient(135deg, #fff9fb 0%, #fce4ec 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '🐾';
+            position: absolute;
+            top: 10%;
+            left: 5%;
+            font-size: 4rem;
+            opacity: 0.1;
+            transform: rotate(-20deg);
+        }
+
+        .hero::after {
+            content: '🐾';
+            position: absolute;
+            bottom: 10%;
+            right: 5%;
+            font-size: 5rem;
+            opacity: 0.1;
+            transform: rotate(20deg);
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+        }
+
+        .hero-text h1 span {
+            color: var(--primary-dark);
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            color: var(--text-gray);
+            margin-bottom: 30px;
+            max-width: 500px;
+        }
+
+        .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .badge {
+            background: white;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .hero-cta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image-placeholder {
+            width: 100%;
+            max-width: 400px;
+            aspect-ratio: 1;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 6rem;
+            box-shadow: 0 20px 40px rgba(108, 92, 231, 0.3);
+            position: relative;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .hero-image-placeholder::after {
+            content: 'Seu pet feliz aqui!';
+            font-size: 1rem;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 700;
+            margin-top: 10px;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        /* Seção de Destaque Sem Gaiolas */
+        .no-cages {
+            background: var(--secondary);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .no-cages i {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--accent);
+        }
+
+        .no-cages h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .no-cages p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Serviços */
+        .services {
+            padding: 80px 0;
+            background: var(--bg-white);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--text-gray);
+            font-size: 1.1rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .service-card {
+            background: var(--bg-light);
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 30px rgba(247, 141, 167, 0.2);
+        }
+
+        .service-card i {
+            font-size: 2.5rem;
+            color: var(--primary-dark);
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+
+        .service-card p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        .service-card .tag {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--text-dark);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        /* Sobre Jéssica */
+        .about {
+            padding: 80px 0;
+            background: var(--bg-light);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-image-placeholder {
+            width: 100%;
+            max-width: 350px;
+            aspect-ratio: 1;
+            background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
+            border-radius: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 5rem;
+            box-shadow: 0 20px 40px rgba(247, 141, 167, 0.3);
+            margin: 0 auto;
+        }
+
+        .about-image-placeholder::after {
+            content: 'Jéssica ❤️';
+            font-size: 1.2rem;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 700;
+            margin-top: 10px;
+        }
+
+        .about-text h2 {
+            font-size: 2.2rem;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            color: var(--text-gray);
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+        }
+
+        /* Como Funciona */
+        .how-it-works {
+            padding: 80px 0;
+            background: var(--bg-white);
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .step-card {
+            text-align: center;
+            padding: 30px 20px;
+            background: var(--bg-light);
+            border-radius: 20px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .step-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .step-number {
+            width: 45px;
+            height: 45px;
+            background: var(--secondary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.2rem;
+            margin: 0 auto 15px;
+            font-family: 'Fredoka', sans-serif;
+        }
+
+        .step-card i {
+            font-size: 1.5rem;
+            color: var(--primary-dark);
+            margin-bottom: 10px;
+        }
+
+        .step-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .step-card p {
+            font-size: 0.85rem;
+            color: var(--text-gray);
+        }
+
+        /* Depoimentos */
+        .testimonials {
+            padding: 80px 0;
+            background: var(--bg-light);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            font-size: 5rem;
+            color: var(--primary);
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            opacity: 0.3;
+            font-family: serif;
+        }
+
+        .testimonial-card p {
+            color: var(--text-gray);
+            font-style: italic;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+        }
+
+        .author-info h4 {
+            font-size: 1rem;
+            color: var(--text-dark);
+        }
+
+        .author-info span {
+            font-size: 0.8rem;
+            color: var(--text-gray);
+        }
+
+        .stars {
+            color: var(--accent);
+            margin-bottom: 10px;
+        }
+
+        /* Localização e Horários */
+        .location {
+            padding: 80px 0;
+            background: var(--bg-white);
+        }
+
+        .location-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .location-info h2 {
+            font-size: 2rem;
+            margin-bottom: 25px;
+        }
+
+        .info-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            align-items: flex-start;
+        }
+
+        .info-item i {
+            font-size: 1.3rem;
+            color: var(--primary-dark);
+            margin-top: 3px;
+            width: 25px;
+            text-align: center;
+        }
+
+        .info-item h4 {
+            font-size: 1rem;
+            margin-bottom: 3px;
+        }
+
+        .info-item p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+
+        .location-map-placeholder {
+            background: var(--bg-light);
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 300px;
+            color: var(--text-gray);
+            border: 2px dashed var(--primary);
+            text-align: center;
+            padding: 30px;
+        }
+
+        .location-map-placeholder i {
+            font-size: 3rem;
+            color: var(--primary-dark);
+            margin-bottom: 15px;
+        }
+
+        /* FAQ */
+        .faq {
+            padding: 80px 0;
+            background: var(--bg-light);
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .faq-question {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 700;
+            color: var(--text-dark);
+            transition: background 0.3s;
+        }
+
+        .faq-question:hover {
+            background: var(--bg-light);
+        }
+
+        .faq-question i {
+            color: var(--primary-dark);
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            padding: 0 20px;
+            color: var(--text-gray);
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding: 0 20px 20px;
+        }
+
+        /* CTA Final */
+        .final-cta {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .final-cta p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .final-cta .btn {
+            background: white;
+            color: var(--primary-dark);
+            font-size: 1.1rem;
+            padding: 18px 40px;
+        }
+
+        .final-cta .btn:hover {
+            background: var(--accent);
+            color: var(--text-dark);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: white;
+            padding: 40px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-col h4 {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .footer-col p, .footer-col a {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            display: block;
+            transition: color 0.3s;
+        }
+
+        .footer-col a:hover {
+            color: var(--primary);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.5);
+        }
+
+        .footer-bottom a {
+            color: var(--primary);
+        }
+
+        /* Formulário Modal de Agendamento */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            max-width: 500px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-gray);
+            cursor: pointer;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s;
+        }
+
+        .modal-close:hover {
+            background: var(--bg-light);
+        }
+
+        .modal-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+            color: var(--text-dark);
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #eee;
+            border-radius: 12px;
+            font-family: 'Nunito', sans-serif;
+            font-size: 0.95rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .modal-content .btn {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        /* Responsivo */
+        @media (max-width: 900px) {
+            .hero-content, .about-content, .location-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-text p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-badges, .hero-cta {
+                justify-content: center;
+            }
+
+            .hero-image-placeholder {
+                max-width: 280px;
+                font-size: 4rem;
+                margin: 0 auto;
+            }
+
+            .about-image-placeholder {
+                max-width: 250px;
+                font-size: 4rem;
+            }
+
+            .hero {
+                padding: 40px 0 60px;
+            }
+
+            .no-cages h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .header-content {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .header-cta .btn span {
+                display: none;
+            }
+
+            .header-cta .btn {
+                padding: 10px 15px;
+            }
+
+            .hero-text h1 {
+                font-size: 1.8rem;
+            }
+
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+
+            .final-cta h2 {
+                font-size: 1.8rem;
+            }
+
+            .btn {
+                padding: 12px 22px;
+                font-size: 0.9rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .steps-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Botão WhatsApp Flutuante */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background: var(--whatsapp);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.5);
+            z-index: 1500;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            background: var(--whatsapp-dark);
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+
+        /* Scroll suave */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <i class="fas fa-paw"></i>
+                Sweet Pet
+            </div>
+            <div class="header-cta">
+                <a href="#servicos" class="btn btn-outline">Serviços</a>
+                <a href="https://wa.me/5518991817474?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio%20para%20meu%20pet." target="_blank" class="btn btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> <span>Agendar</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>Onde o cuidado encontra a <span>felicidade do seu pet</span></h1>
+                <p>Transformamos o banho e a tosa em uma experiência de amor, carinho e <strong>100% livre de gaiolas</strong>. Seu melhor amigo merece!</p>
+                <div class="hero-badges">
+                    <span class="badge"><i class="fas fa-heart"></i> Sem Gaiolas</span>
+                    <span class="badge"><i class="fas fa-star"></i> Profissional Especializada</span>
+                    <span class="badge"><i class="fas fa-shield-alt"></i> Produtos Seguros</span>
+                </div>
+                <div class="hero-cta">
+                    <a href="https://wa.me/5518991817474?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio%20para%20meu%20pet." target="_blank" class="btn btn-whatsapp">
+                        <i class="fab fa-whatsapp"></i> Agendar pelo WhatsApp
+                    </a>
+                    <a href="#servicos" class="btn btn-outline">Ver Serviços</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-image-placeholder">
+                    <i class="fas fa-dog"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destaque Sem Gaiolas -->
+    <section class="no-cages">
+        <div class="container">
+            <i class="fas fa-heart"></i>
+            <h2>Ambiente 100% Livre de Gaiolas</h2>
+            <p>Na Sweet Pet, acreditamos que o bem-estar vem em primeiro lugar. Aqui, seu pet fica livre para se movimentar, socializar e relaxar durante todo o atendimento.</p>
+        </div>
+    </section>
+
+    <!-- Serviços -->
+    <section class="services" id="servicos">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nossos Serviços</h2>
+                <p>Cuidado, carinho e nada de gaiolas. Seu pet sempre livre!</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-bath"></i>
+                    <h3>Banho</h3>
+                    <p>Banho relaxante com produtos especiais e muito carinho.</p>
+                    <span class="tag">🐾 Sem Gaiolas</span>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-cut"></i>
+                    <h3>Tosa</h3>
+                    <p>Tosa higiênica, na tesoura ou completa, conforme a raça e o estilo do seu pet.</p>
+                    <span class="tag">🐾 Sem Gaiolas</span>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-spa"></i>
+                    <h3>Estética</h3>
+                    <p>Hidratação, penteados e cuidados de beleza para deixar seu pet irresistível.</p>
+                    <span class="tag">🐾 Sem Gaiolas</span>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-paw"></i>
+                    <h3>Corte de Unhas</h3>
+                    <p>Corte cuidadoso para garantir o conforto e a saúde das patinhas do seu amigo.</p>
+                    <span class="tag">🐾 Sem Gaiolas</span>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-ear-listen"></i>
+                    <h3>Limpeza de Ouvidos</h3>
+                    <p>Limpeza delicada para prevenir infecções e manter a saúde auditiva do seu pet.</p>
+                    <span class="tag">🐾 Sem Gaiolas</span>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-tint"></i>
+                    <h3>Hidratação de Pelo</h3>
+                    <p>Tratamentos de hidratação profunda para um pelo macio, brilhante e saudável.</p>
+                    <span class="tag">🐾 Sem Gaiolas</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Jéssica -->
+    <section class="about" id="sobre">
+        <div class="container about-content">
+            <div class="about-image-placeholder">
+                <i class="fas fa-user-circle"></i>
+            </div>
+            <div class="about-text">
+                <h2>Sobre a Jéssica</h2>
+                <h3 style="color: var(--primary-dark); margin-bottom: 15px; font-size: 1.2rem;">Especialista em Banho & Tosa</h3>
+                <p>Apaixonada por pets desde sempre, Jéssica é a alma da Sweet Pet. Ela une técnica, carinho e paciência em cada atendimento, garantindo que cada pet receba o melhor cuidado possível.</p>
+                <p>Formada e constantemente atualizada nas melhores práticas de banho, tosa e bem-estar animal, Jéssica tem um olhar atento para o conforto e a segurança de cada bichinho.</p>
+                <p><strong>Quem conhece o trabalho da Jéssica sabe:</strong> ela trata cada animalzinho como se fosse parte da família. ❤️</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Como Funciona o Banho -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="section-title">
+                <h2>Como funciona nosso banho?</h2>
+                <p>Um passo a passo do nosso tratamento de spa para o seu melhor amigo.</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <i class="fas fa-brush"></i>
+                    <h3>Preparação e Escovação</h3>
+                    <p>Escovação cuidadosa para remover nós e pelos soltos.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <i class="fas fa-shower"></i>
+                    <h3>Banho Terapêutico</h3>
+                    <p>Shampoos de alta qualidade e água na temperatura ideal.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <i class="fas fa-hand-sparkles"></i>
+                    <h3>Hidratação e Massagem</h3>
+                    <p>Condicionador hidratante com massagem relaxante.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <i class="fas fa-wind"></i>
+                    <h3>Secagem Segura</h3>
+                    <p>Toalhas e secadores de baixo ruído e temperatura controlada.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">5</div>
+                    <i class="fas fa-star"></i>
+                    <h3>Finalização de Luxo</h3>
+                    <p>Limpeza de orelhas, corte de unhas e perfume suave.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>O que os tutores dizem</h2>
+                <p>Histórias de amor e confiança de quem já confia na Sweet Pet.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"A Jéssica é maravilhosa! Minha Mel volta sempre linda e super tranquila. O ambiente sem gaiolas faz toda a diferença!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MC</div>
+                        <div class="author-info">
+                            <h4>Maria Clara</h4>
+                            <span>Tutora da Mel</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Meu Thor tem medo de banho, mas na Sweet Pet ele fica calmo. O carinho e paciência são impressionantes. Recomendo!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JP</div>
+                        <div class="author-info">
+                            <h4>João Pedro</h4>
+                            <span>Tutor do Thor</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"A tosa da minha Lili ficou perfeita! Atendimento impecável, ambiente limpo e sem estresse para ela. Já virei cliente fiel."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AS</div>
+                        <div class="author-info">
+                            <h4>Ana Souza</h4>
+                            <span>Tutora da Lili</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Localização e Horários -->
+    <section class="location" id="contato">
+        <div class="container">
+            <div class="section-title">
+                <h2>Venha nos Visitar</h2>
+                <p>Estamos prontos para receber seu pet com todo carinho!</p>
+            </div>
+            <div class="location-content">
+                <div class="location-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Endereço</h4>
+                            <p>R. José Scarpim, 331 - Jardim Recanto dos Pássaros<br>Birigui - SP, 16201-150</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h4>Telefone / WhatsApp</h4>
+                            <p>(18) 99181-7474</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Horário de Funcionamento</h4>
+                            <p>Terça a sexta: 07:20 às 16:00<br>Sábado: 07:20 às 13:00</p>
+                        </div>
+                    </div>
+                    <div style="margin-top: 25px;">
+                        <a href="https://wa.me/5518991817474?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio%20para%20meu%20pet." target="_blank" class="btn btn-whatsapp">
+                            <i class="fab fa-whatsapp"></i> Agendar Horário
+                        </a>
+                    </div>
+                </div>
+                <div class="location-map-placeholder">
+                    <i class="fas fa-map"></i>
+                    <h3>Como Chegar</h3>
+                    <p style="margin-bottom: 15px;">Estamos localizados no Jardim Recanto dos Pássaros, em Birigui - SP.</p>
+                    <a href="https://www.google.com/maps/search/?api=1&query=R.+José+Scarpim,+331+-+Jardim+Recanto+dos+Passaros+-+Birigui+-+SP,+16201-150" target="_blank" class="btn btn-outline" style="margin-top: 10px;">
+                        <i class="fas fa-directions"></i> Abrir no Google Maps
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-title">
+                <h2>Perguntas Frequentes</h2>
+                <p>Tire suas dúvidas sobre nossos serviços!</p>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        O que está incluído no banho e tosa?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Seu amiguinho vai sair cheiroso e radiante! Nossos mimos incluem: banho completo com produtos especiais, corte de unhas, limpeza de ouvidos, higiene íntima, secagem, escovação e tosa (corte de pelos) conforme o estilo desejado.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Com que frequência devo trazer meu pet?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Cada pet tem seu jeitinho! Em geral, recomendamos um banho a cada 15 dias e um retoque na tosa a cada 1 a 2 meses. Pets com pelos mais longos ou que adoram brincar na rua podem precisar de visitas mais regulares.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        O que devo preparar antes do banho?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>É super simples! Verifique se seu pet está saudável, sem machucados. Avise-nos sobre qualquer sensibilidade ou alergia. Pedimos que ele fique sem comer por pelo menos 2 horas antes do horário, para evitar mal-estar.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Os produtos usados são seguros?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Com certeza! A segurança é nossa prioridade número 1. Usamos apenas produtos específicos para pets, hipoalergênicos e aprovados por veterinários, garantindo puro conforto durante o banho.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Quanto tempo dura o atendimento?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>O tempo varia conforme o tamanho, tipo de pelo e temperamento do pet. Em média, o serviço completo de banho e tosa leva entre 1 a 2 horas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Pronto para mimar seu pet?</h2>
+            <p>Agende agora e proporcione uma experiência de amor e cuidado para seu melhor amigo!</p>
+            <a href="https://wa.me/5518991817474?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio%20para%20meu%20pet." target="_blank" class="btn">
+                <i class="fab fa-whatsapp"></i> Agendar pelo WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4><i class="fas fa-paw"></i> Sweet Pet</h4>
+                    <p>Onde o cuidado encontra a felicidade do seu pet. Banho e tosa sem gaiolas em Birigui - SP.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Contato</h4>
+                    <a href="https://wa.me/5518991817474" target="_blank"><i class="fab fa-whatsapp"></i> (18) 99181-7474</a>
+                    <a href="https://maps.google.com/?q=R.+José+Scarpim,+331+-+Jardim+Recanto+dos+Passaros+-+Birigui+-+SP" target="_blank"><i class="fas fa-map-marker-alt"></i> R. José Scarpim, 331 - Birigui/SP</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Horários</h4>
+                    <p>Terça a Sexta: 07:20 - 16:00</p>
+                    <p>Sábado: 07:20 - 13:00</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Redes Sociais</h4>
+                    <a href="https://www.instagram.com/sweetpetbirigui" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="https://www.facebook.com/sweetpetbirigui" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Sweet Pet Birigui. Todos os direitos reservados. | Maus-tratos a animais é crime (Lei nº 9.605/98). Denuncie: 181.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão WhatsApp Flutuante -->
+    <a href="https://wa.me/5518991817474?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio%20para%20meu%20pet." target="_blank" class="whatsapp-float" aria-label="Agendar pelo WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Modal de Agendamento (Opcional - abre ao clicar em botões específicos) -->
+    <div class="modal" id="agendamentoModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="fecharModal()"><i class="fas fa-times"></i></button>
+            <h3>Agende o Banho & Tosa</h3>
+            <p style="color: var(--text-gray); margin-bottom: 20px;">Preencha os dados abaixo e enviaremos sua solicitação pelo WhatsApp.</p>
+            <form id="agendamentoForm" onsubmit="enviarAgendamento(event)">
+                <div class="form-group">
+                    <label for="tutorNome">Seu Nome *</label>
+                    <input type="text" id="tutorNome" placeholder="Nome do tutor" required>
+                </div>
+                <div class="form-group">
+                    <label for="petNome">Nome do Pet *</label>
+                    <input type="text" id="petNome" placeholder="Nome do seu pet" required>
+                </div>
+                <div class="form-group">
+                    <label for="petPorte">Porte do Pet</label>
+                    <select id="petPorte">
+                        <option value="Pequeno">Pequeno</option>
+                        <option value="Médio">Médio</option>
+                        <option value="Grande">Grande</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="servicoDesejado">Serviço Desejado *</label>
+                    <select id="servicoDesejado" required>
+                        <option value="Banho">Banho</option>
+                        <option value="Tosa">Tosa</option>
+                        <option value="Banho e Tosa">Banho e Tosa</option>
+                        <option value="Hidratação">Hidratação</option>
+                        <option value="Outro">Outro</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="dataPreferida">Data Preferida</label>
+                    <input type="date" id="dataPreferida">
+                </div>
+                <div class="form-group">
+                    <label for="observacoes">Observações</label>
+                    <textarea id="observacoes" placeholder="Alguma informação adicional sobre seu pet?"></textarea>
+                </div>
+                <button type="submit" class="btn btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Enviar pelo WhatsApp
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                const isActive = item.classList.contains('active');
+                
+                // Fecha todos
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+                
+                // Abre o clicado se não estava ativo
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // Abrir modal de agendamento (pode ser chamado por qualquer botão com data-modal)
+        function abrirModal() {
+            document.getElementById('agendamentoModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function fecharModal() {
+            document.getElementById('agendamentoModal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Fechar modal ao clicar fora
+        document.getElementById('agendamentoModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                fecharModal();
+            }
+        });
+
+        // Enviar formulário via WhatsApp
+        function enviarAgendamento(event) {
+            event.preventDefault();
+            
+            const nome = document.getElementById('tutorNome').value;
+            const pet = document.getElementById('petNome').value;
+            const porte = document.getElementById('petPorte').value;
+            const servico = document.getElementById('servicoDesejado').value;
+            const data = document.getElementById('dataPreferida').value;
+            const obs = document.getElementById('observacoes').value;
+            
+            let mensagem = `Olá, Sweet Pet! Gostaria de agendar um horário.%0A%0A`;
+            mensagem += `*Tutor:* ${nome}%0A`;
+            mensagem += `*Pet:* ${pet}%0A`;
+            mensagem += `*Porte:* ${porte}%0A`;
+            mensagem += `*Serviço:* ${servico}%0A`;
+            
+            if (data) {
+                // Formatar data para DD/MM/YYYY
+                const dataObj = new Date(data + 'T00:00:00');
+                const dataFormatada = dataObj.toLocaleDateString('pt-BR');
+                mensagem += `*Data preferida:* ${dataFormatada}%0A`;
+            }
+            
+            if (obs) {
+                mensagem += `*Observações:* ${obs}%0A`;
+            }
+            
+            mensagem += `%0A%0AEnviado pelo site Sweet Pet 🐾`;
+            
+            const url = `https://wa.me/5518991817474?text=${mensagem}`;
+            window.open(url, '_blank');
+            
+            fecharModal();
+            
+            // Limpar formulário
+            document.getElementById('agendamentoForm').reset();
+        }
+
+        // Adicionar evento para abrir modal em botões específicos (opcional)
+        // Por padrão, os botões já redirecionam direto para o WhatsApp.
+        // Se quiser usar o modal, descomente a linha abaixo e adicione a classe "modal-trigger" nos botões desejados.
+        
+        // document.querySelectorAll('.modal-trigger').forEach(btn => {
+        //     btn.addEventListener('click', function(e) {
+        //         e.preventDefault();
+        //         abrirModal();
+        //     });
+        // });
+
+        // Animação de scroll suave para links internos (já configurado via CSS)
+    </script>
+</body>
+</html>
